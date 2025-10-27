@@ -64,7 +64,7 @@ INSTALLED_APPS = [
     "debug_toolbar",
     # 'rest_framework',
     # 'corsheaders'
-    'django_project_root.app_1',
+    'app_1',
 ]
 
 MIDDLEWARE = [
@@ -83,7 +83,7 @@ ROOT_URLCONF = 'configuration_root.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'django_project_root/templates/'],
+        'DIRS': [BASE_DIR / 'templates/'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -108,9 +108,9 @@ DATABASES = {
     },
     # 'default': {
     #     'ENGINE': 'django.db.backends.postgresql',
-    #     'NAME': 'crm_db',
-    #     'USER': 'crm_user',
-    #     'PASSWORD': 'crm_pass_dev',
+    #     'NAME': 'db_name',
+    #     'USER': 'db_user',
+    #     'PASSWORD': 'pass_dev',
     #     'HOST': 'localhost',
     #     'PORT': 5432,
     # }
@@ -152,11 +152,11 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 # STATIC_URL = 'static/'
-# STATIC_ROOT = BASE_DIR / 'django_project_root/static/'
+# STATIC_ROOT = BASE_DIR / 'static/'
 STATIC_URL = 'static/' 
 STATIC_ROOT = BASE_DIR / 'staticfiles/'
 STATICFILES_DIRS = [
-    BASE_DIR / 'django_project_root/static/',
+    BASE_DIR / 'static/',
 ]
 
 # Default primary key field type
@@ -166,7 +166,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Media files
 MEDIA_URL = '/media/'
-MEDIA_ROOT = BASE_DIR / 'django_project_root/media/'
+MEDIA_ROOT = BASE_DIR / 'media/'
 
 # CORS 
 # CORS_ALLOW_ALL_ORIGINS = True
